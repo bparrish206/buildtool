@@ -1,0 +1,19 @@
+{
+  "name": "buildtool",
+  "version": "0.0.0",
+  "homepage": "https://github.com/bparrish206/Data-structures",
+  "authors": [
+    "bparrish206"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1"
+  }
+}

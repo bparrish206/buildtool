@@ -1,0 +1,38 @@
+$primaryColor: #FFDEAD;
+$highlights:#FA8072;
+$tone:#ADD8E6;
+$appB:#FFFFF0;
+$text:#9370DB;
+$font-stack:    Helvetica, sans-serif;
+
+@mixin border-radius($radius){
+  border-radius: $radius;
+}
+
+
+body {
+  background: $primaryColor;
+  font: 100% $font-stack;
+}
+
+#box {
+background: $tone;
+padding:20px;
+border:4px ridge $highlights;
+@include border-radius(10px);
+}
+
+#app {
+  background:$appB;
+  padding:15px;
+  text-align:center;
+  margin:0px 100px 0px 100px;
+  border:1px solid $highlights;
+  @include border-radius(25px);
+}
+
+body #box h3 {
+  #app h4 {
+  color:$text;
+  }
+}

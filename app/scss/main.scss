@@ -1,8 +1,8 @@
-$primaryColor: #FFDEAD;
-$highlights:#FA8072;
+$primaryColor: #A9A9A9;
+$highlights:#DA70D6;
 $tone:#ADD8E6;
-$appB:#FFFFF0;
-$text:#9370DB;
+$appB:#E6E6FA;
+$text:#4169E1;
 $font-stack:    Helvetica, sans-serif;
 
 @mixin border-radius($radius){
@@ -18,7 +18,7 @@ body {
 #box {
 background: $tone;
 padding:20px;
-border:4px ridge $highlights;
+border:3px ridge $highlights;
 @include border-radius(10px);
 }
 
@@ -31,8 +31,17 @@ border:4px ridge $highlights;
   @include border-radius(25px);
 }
 
-body #box h3 {
-  #app h4 {
+#main {
+  @extend #app;
+}
+h3 {
   color:$text;
-  }
+  text-shadow: 1px 1px white;
+}
+
+h4 {
+  @extend h3;
+}
+h5 {
+  @extend h4;
 }

@@ -17,10 +17,11 @@ app.post('/', function(req, res, next){
       var block = JSON.stringify(purlData.body);
       block = block.replace(/[{}]/g,'');
       block = block.replace(/[""]/g,'');
+      block = block.replace(/[:]/g, ': ');
+      block = block.replace(/[,]/g, ', ');
       var rdate = date.slice(0,10);
     res.json({chart: title, date: rdate, choice: choice, value: value, block: block});
     next();
   });
-  
 });
 };

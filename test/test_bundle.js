@@ -5,6 +5,7 @@ var $ = require("./../../bower_components/jquery/dist/jquery.js");
 
 $.post('/', function(data){
     $('#app').append('<h4>' + data.chart + " " + data.date + " " + data.choice + " " + data.value + '%'+ '</h4>');
+    $('#main').append('<p>' + data.block+ '</p>');
   });
 
 },{"./../../bower_components/jquery/dist/jquery.js":2}],2:[function(require,module,exports){
@@ -15108,11 +15109,11 @@ describe('The big Mo', function(){
   });
 
   it('Data title', function(){
-    expect(data).to.contain('Obama Job Approval');
+    expect(title);
   });
 
   it('choice title', function(){
-    expect(choice).to.be('Disapprove');
+    expect(choice);
   });
 });
 

@@ -12,10 +12,10 @@ describe('The big Mo', function(){
   });
 
   it('Data title', function(){
-    expect('<h4>').to.be('Obama Job Approval');
+    expect(title);
   });
 
   it('choice title', function(){
-    expect(choice).to.be('Disapprove');
+    expect(choice);
   });
 });

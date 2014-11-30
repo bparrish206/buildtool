@@ -26,12 +26,13 @@ module.exports = function(grunt){
           cwd: 'app/',
           src: ['**/*.html', 'css/**/*.css'],
           expand: true,
-          dest: 'build/'
+          dest: 'build'
         }
       },
 
       browserify: {
         dev: {
+          require : { jquery : 'jquery-browserify' },
           src: ['app/js**/*.js'],
           dest: 'build/bundle.js',
           options: {

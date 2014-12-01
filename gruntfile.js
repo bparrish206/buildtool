@@ -3,6 +3,8 @@
 module.exports = function(grunt){
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-jscs');
   grunt.loadNpmTasks('grunt-browserify');
   grunt.loadNpmTasks('grunt-sass');
 
@@ -47,7 +49,24 @@ module.exports = function(grunt){
             transform: ['debowerify']
           }
         }
+      },
+
+      jshint: {
+      all: ['app/js**/*.js'],
+      options: {
+        jshintrc: true
       }
+    },
+
+      jscs: {
+      src: ['app/js**/*.js', 'test/server_test.js'],
+      options: {
+        config: '.jscsrc'
+      }
+    }
+
   });
   grunt.registerTask('build:dev', ['sass', 'clean:dev', 'browserify:dev', 'copy:dev']);
+  grunt.registerTask('test', ['jshint', 'jscs']);
+  grunt.registerTask('default', ['test']);
 };

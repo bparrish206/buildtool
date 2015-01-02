@@ -16,10 +16,10 @@ body {
 }
 
 #box {
-background: $tone;
-padding:20px;
-border:3px ridge $highlights;
-@include border-radius(10px);
+  background: $tone;
+  padding:20px;
+  border:3px ridge $highlights;
+  @include border-radius(10px);
 }
 
 #app {
@@ -48,4 +48,18 @@ h5 {
 p {
   font-family:Geneva;
   padding:1px;
+}
+
+button {
+  background-color: #0074D9;
+  @include border-radius(10px);
+  padding: 5px;
+}
+
+button h3 {
+  color:#ffffff;
+}
+
+#main p {
+  display: none;
 }

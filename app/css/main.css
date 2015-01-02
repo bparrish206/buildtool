@@ -10,9 +10,9 @@ body {
 
 #app, #main {
   background: #E6E6FA;
-  padding: 15px;
+  padding: 5px;
   text-align: center;
-  margin: 0px 100px 0px 100px;
+  margin: 0px 150px 0px 150px;
   border: 1px solid #DA70D6;
   border-radius: 25px; }
 
@@ -30,7 +30,8 @@ button {
   padding: 5px; }
 
 button h3, button h4, button h5 {
-  color: #ffffff; }
+  color: #F6B17F;
+  text-shadow: none; }
 
 #main p {
   display: none; }

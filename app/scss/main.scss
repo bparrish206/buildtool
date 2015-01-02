@@ -24,9 +24,9 @@ body {
 
 #app {
   background:$appB;
-  padding:15px;
+  padding:5px;
   text-align:center;
-  margin:0px 100px 0px 100px;
+  margin:0px 150px 0px 150px;
   border:1px solid $highlights;
   @include border-radius(25px);
 }
@@ -57,7 +57,8 @@ button {
 }
 
 button h3 {
-  color:#ffffff;
+  color:#F6B17F;
+  text-shadow:none;
 }
 
 #main p {

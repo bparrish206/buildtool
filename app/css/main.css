@@ -25,9 +25,11 @@ p {
   padding: 1px; }
 
 button {
-  background-color: #0074D9; }
+  background-color: #0074D9;
+  border-radius: 10px;
+  padding: 5px; }
 
-button h4, button h5 {
+button h3, button h4, button h5 {
   color: #ffffff; }
 
 #main p {

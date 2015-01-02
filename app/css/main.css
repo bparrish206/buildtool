@@ -23,3 +23,12 @@ h3, h4, h5 {
 p {
   font-family: Geneva;
   padding: 1px; }
+
+button {
+  background-color: #0074D9; }
+
+button h4, button h5 {
+  color: #ffffff; }
+
+#main p {
+  display: none; }

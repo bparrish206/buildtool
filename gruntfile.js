@@ -35,7 +35,7 @@ module.exports = function(grunt){
       browserify: {
         dev: {
           require : { jquery : 'jquery-browserify' },
-          src: ['app/js**/*.js', 'routes/app_routes'],
+          src: ['app/js**/*.js', 'routes/app_routes', 'index.js'],
           dest: 'build/bundle.js',
           options: {
             transform: ['debowerify']

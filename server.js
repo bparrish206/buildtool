@@ -5,7 +5,6 @@ var app = express();
 var request = require('superagent');
 
 app.use(express.static(__dirname + '/build'));
-
 app.post('/', function(req, res){
   var purl = 'http://elections.huffingtonpost.com/pollster/api/charts/obama-job-approval';
   request
@@ -29,4 +28,4 @@ app.post('/', function(req, res){
 
 //require('./routes/app_routes')(app);
 
-app.listen(3000);
+app.listen(process.env.PORT || 35728);

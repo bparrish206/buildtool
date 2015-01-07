@@ -3,7 +3,7 @@
 var request = require('superagent');
 
 module.exports = function(app){
-app.post('/', function(req, res, next){
+app.post('/', function(req, res){
   var purl = 'http://elections.huffingtonpost.com/pollster/api/charts/obama-job-approval';
   request
     .get(purl)
@@ -21,7 +21,6 @@ app.post('/', function(req, res, next){
       block = block.replace(/[,]/g, ', ');
       var rdate = date.slice(0,10);
     res.json({chart: title, date: rdate, choice: choice, value: value, block: block});
-    next();
   });
 });
 };

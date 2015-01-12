@@ -4,6 +4,7 @@ $tone:#ADD8E6;
 $appB:#E6E6FA;
 $text:#4169E1;
 $font-stack:    Helvetica, sans-serif;
+@import "bootstrap";
 
 @mixin border-radius($radius){
   border-radius: $radius;

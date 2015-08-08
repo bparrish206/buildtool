@@ -1,7 +1,5 @@
 {
-
   "name": "prezaproval",
-
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -29,6 +27,5 @@
   },
   "_aerobatic": {
     "appId": "ZyEmCa9xF"
-
   }
 }

@@ -5,6 +5,8 @@ $appB:#E6E6FA;
 $text:#4169E1;
 $font-stack:    Helvetica, sans-serif;
 @import "bootstrap";
+@import "settings";
+@import "foundation";
 
 @mixin border-radius($radius){
   border-radius: $radius;
@@ -64,4 +66,15 @@ button h3 {
 
 #main p {
   display: none;
+}
+
+
+svg {
+  font-family: "Helvetica Neue", Helvetica;
+}
+
+.line {
+  fill: none;
+  stroke: #000;
+  stroke-width: 2px;
 }

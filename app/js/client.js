@@ -19,8 +19,17 @@ $.post('/', function(data) {
             data.addColumn('number', 'Approve');
             data.addColumn('number', 'Undecided');
 
-        _.map(ddd, function(x){ _.map(x.estimates, function(est){data.addRows(est.value)}) //{var date = x.date.split('-').join(',')
-          console.log(ddd);
+        _.map(ddd, function(x){ var row = [];
+          _.map(x.estimates, function(est){ row.push(est.value)})
+            console.log(row.length);
+            if (row.length < 3){
+              row.push(0);
+              console.log(row)
+            } else {
+            data.addRows([row]);
+          };
+           //{var date = x.date.split('-').join(',')
+          //console.log(ddd);
         });
 
         var options = {

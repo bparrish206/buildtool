@@ -14,17 +14,28 @@ $.post('/', function(data) {
   google.setOnLoadCallback(drawChart);
 
       function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Date'],
-          ]);
-        _.map(ddd, function(x) {console.log(x.date, _.map(x.estimates, function(est){console.log(est.value)}));
-            data.addRows(x.date);
+        var data = new google.visualization.DataTable();
+            data.addColumn('number', 'Disapprove');
+            data.addColumn('number', 'Approve');
+            data.addColumn('number', 'Undecided');
+
+        _.map(ddd, function(x){ var row = [];
+          _.map(x.estimates, function(est){ row.push(est.value)})
+            console.log(row.length);
+            if (row.length < 3){
+              row.push(0);
+              console.log(row)
+            } else {
+            data.addRows([row]);
+          };
+           //{var date = x.date.split('-').join(',')
+          //console.log(ddd);
         });
 
         var options = {
           title: 'Obama Job Approval',
-          hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
-          vAxis: {minValue: 0}
+          hAxis: {title: 'Year', minValue: 0.0,  titleTextStyle: {color: '#333'}},
+          vAxis: {minValue: 0.0}
         };
 
         var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));

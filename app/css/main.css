@@ -35,3 +35,9 @@ button h3, button h4, button h5 {
 
 #main p {
   display: none; }
+
+#chart_div {
+height: 500px;
+margin: 3% 15%;
+}
+

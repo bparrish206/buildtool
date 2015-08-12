@@ -24,9 +24,7 @@ app.post('/', function(req, res){
       var test4 = test3.join(', ');
       fs.writeFile('chart.csv', test4, function(err) {
         if(err) throw err;
-        console.log("Chart has saved!");
       });
-      //console.log(test2);
       var rdate = date.slice(0,10);
     res.json({chart: title, date: rdate, choice: choice, value: value, test2: test2});
   });

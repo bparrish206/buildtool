@@ -1,11 +1,14 @@
 'use strict';
-
 var express = require('express');
 var app = express();
-var request = require('superagent');
 
-app.use(express.static(__dirname + '/build'));
 
 require('./routes/app_routes')(app);
+app.use(express.static(__dirname + '/app'));
 
-app.listen(process.env.PORT || 35728);
+app.set('port', process.env.PORT || 3323);
+app.listen(app.get('port'), function() {
+  console.log('server running on port: %d', app.get('port'));
+});
+
+module.exports = app;

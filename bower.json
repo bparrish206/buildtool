@@ -1,7 +1,7 @@
 {
   "name": "buildtool",
   "version": "0.0.0",
-  "homepage": "https://github.com/bparrish206",
+  "homepage": "https://github.com/bparrish206/Data-structures",
   "authors": [
     "bparrish206"
   ],
@@ -16,6 +16,6 @@
   "dependencies": {
     "jquery": "~2.1.1",
     "foundation": "~5.4.7",
-    "underscore": "~1.8.3"
+    "underscore": "1.8.3"
   }
 }

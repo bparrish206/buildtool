@@ -1,12 +1,9 @@
 $primaryColor: #A9A9A9;
 $highlights:#DA70D6;
-$tone:#ADD8E6;
+$tone:#aa8bd0;
 $appB:#E6E6FA;
 $text:#4169E1;
 $font-stack:    Helvetica, sans-serif;
-@import "bootstrap";
-@import "settings";
-@import "foundation";
 
 @mixin border-radius($radius){
   border-radius: $radius;
@@ -21,25 +18,27 @@ body {
 #box {
   background: $tone;
   padding:20px;
-  border:3px ridge $highlights;
-  @include border-radius(10px);
 }
 
 #app {
-  background:$appB;
   padding:5px;
   text-align:center;
   margin:0px 150px 0px 150px;
-  border:1px solid $highlights;
-  @include border-radius(25px);
+
 }
 
 #main {
   @extend #app;
+  background:$appB;
+  border:1px solid $highlights;
 }
 h3 {
   color:$text;
-  text-shadow: 1px 1px white;
+}
+
+div.panel panel-default {
+  background: $primaryColor;
+  color:white;
 }
 
 h4 {
@@ -54,27 +53,16 @@ p {
 }
 
 button {
-  background-color: #0074D9;
-  @include border-radius(10px);
+  background-color: $appB;
+  @include border-radius(5px);
   padding: 5px;
 }
 
-button h3 {
-  color:#F6B17F;
+button h4 {
+  color:$text;
   text-shadow:none;
 }
 
 #main p {
   display: none;
-}
-
-
-svg {
-  font-family: "Helvetica Neue", Helvetica;
-}
-
-.line {
-  fill: none;
-  stroke: #000;
-  stroke-width: 2px;
 }

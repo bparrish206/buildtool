@@ -2,7 +2,7 @@
 
 var request = require('superagent');
 var _ = require("underscore");
-var fs = require('fs');
+
 
 module.exports = function(app){
 app.post('/', function(req, res){
@@ -21,10 +21,6 @@ app.post('/', function(req, res){
       var test1 = _.values(test);
       var test2 = test1[0];
       var test3 = _.map(test2, function(elm){return  elm.date +", " + _.map(elm.estimates, function(est){return _.values(est)})});
-      var test4 = test3.join(', ');
-      fs.writeFile('chart.csv', test4, function(err) {
-        if(err) throw err;
-      });
       var rdate = date.slice(0,10);
     res.json({chart: title, date: rdate, choice: choice, value: value, test2: test2});
   });

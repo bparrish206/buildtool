@@ -3,34 +3,36 @@ body {
   font: 100% Helvetica, sans-serif; }
 
 #box {
-  background: #ADD8E6;
-  padding: 20px;
-  border: 3px ridge #DA70D6;
-  border-radius: 10px; }
+  background: #aa8bd0;
+  padding: 20px; }
 
 #app, #main {
-  background: #E6E6FA;
   padding: 5px;
   text-align: center;
-  margin: 0px 150px 0px 150px;
-  border: 1px solid #DA70D6;
-  border-radius: 25px; }
+  margin: 0px 150px 0px 150px; }
+
+#main {
+  background: #E6E6FA;
+  border: 1px solid #DA70D6; }
 
 h3, h4, h5 {
-  color: #4169E1;
-  text-shadow: 1px 1px white; }
+  color: #4169E1; }
+
+div.panel panel-default {
+  background: #A9A9A9;
+  color: white; }
 
 p {
   font-family: Geneva;
   padding: 1px; }
 
 button {
-  background-color: #0074D9;
-  border-radius: 10px;
+  background-color: #E6E6FA;
+  border-radius: 5px;
   padding: 5px; }
 
-button h3, button h4, button h5 {
-  color: #F6B17F;
+button h4, button h5 {
+  color: #4169E1;
   text-shadow: none; }
 
 #main p {
@@ -38,6 +40,9 @@ button h3, button h4, button h5 {
 
 #chart_div {
 height: 500px;
-margin: 3% 15%;
+width: 900px;
+margin: 3% 10%;
 }
-
+#box > div.page-header > h1 > small {
+  color: #ccc;
+}

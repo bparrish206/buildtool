@@ -5,7 +5,6 @@ module.exports = function(grunt){
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-jscs');
-  grunt.loadNpmTasks('grunt-browserify');
   grunt.loadNpmTasks('grunt-sass');
 
   grunt.initConfig({
@@ -66,7 +65,7 @@ module.exports = function(grunt){
     }
 
   });
-  grunt.registerTask('build:dev', ['sass', 'clean:dev', 'browserify:dev', 'copy:dev']);
+  grunt.registerTask('build:dev', ['clean:dev', 'browserify:dev', 'copy:dev']);
   grunt.registerTask('test', ['jshint', 'jscs']);
   grunt.registerTask('default', ['test']);
 };
